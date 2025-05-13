@@ -48,6 +48,9 @@ Aufgabe 3:
 <img width="571" alt="image" src="https://github.com/user-attachments/assets/8868a314-353e-478f-be29-2c21347d4014" />
 
 
+Das oben sind die Musterlösungen unten ist meine Lösung.
+
+
 ```
 Swisscom-Telefondose
          │
