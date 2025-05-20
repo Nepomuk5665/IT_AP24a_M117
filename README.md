@@ -66,7 +66,7 @@ Zimmer1 Zimmer2 Zimmer3
 20.05.2025
 
 
-
+Aufgabe 1:
 ⸻
 
 Private IPv4-Adressbereiche
@@ -85,4 +85,44 @@ Spezialadressen
 
 
 ⸻
+
+
+Aufgabe 2:
+
+⸻
+
+✅ 10.11.12.4 /24
+
+Netzmaske: 255.255.255.0
+Netz-ID: 10.11.12
+Host-ID: 4
+Netzwerkadresse: 10.11.12.0
+Broadcastadresse: 10.11.12.255
+
+⸻
+
+✅ 10.11.12.4 /16
+
+Netzmaske: 255.255.0.0
+Netz-ID: 10.11
+Host-ID: 12.4
+Netzwerkadresse: 10.11.0.0
+Broadcastadresse: 10.11.255.255
+
+⸻
+
+✅ 10.11.12.4 /8
+
+Netzmaske: 255.0.0.0
+Netz-ID: 10
+Host-ID: 11.12.4
+Netzwerkadresse: 10.0.0.0
+Broadcastadresse: 10.255.255.255
+
+⸻
+
+
+
+
+
 
