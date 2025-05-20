@@ -161,5 +161,56 @@ Aufgabe 3:
 
 ---
 
+Aufgabe 4:
 
+
+
+---
+
+### 🧮 **1. Paar**  
+**PC1:** 192.168.1.23 / 255.255.255.0  
+**PC2:** 192.168.1.176 / 255.255.255.0  
+
+**Netzadresse beider:** 192.168.1.0  
+✅ **Antwort:** **Ja**  
+**Begründung:** Beide liegen im selben Subnetz (192.168.1.0/24)
+
+---
+
+### 🧮 **2. Paar**  
+**PC1:** 192.168.3.23 / 255.255.0.0  
+**PC2:** 192.168.246.29 / 255.255.0.0  
+
+**Netzadresse beider:** 192.168.0.0  
+✅ **Antwort:** **Ja**  
+**Begründung:** Beide im selben Subnetz (192.168.0.0/16)
+
+---
+
+### 🧮 **3. Paar**  
+**PC1:** 192.168.3.23 / 255.255.255.0 → Subnetz: 192.168.3.0  
+**PC2:** 192.168.246.29 / 255.255.255.0 → Subnetz: 192.168.246.0  
+
+❌ **Antwort:** **Nein**  
+**Begründung:** Unterschiedliche Subnetze (192.168.3.0 ≠ 192.168.246.0)
+
+---
+
+### 🧮 **4. Paar**  
+**PC1:** 10.34.233.27 / 255.0.0.0 → Subnetz: 10.0.0.0  
+**PC2:** 10.167.246.178 / 255.0.0.0 → Subnetz: 10.0.0.0  
+
+✅ **Antwort:** **Ja**  
+**Begründung:** Beide im selben Subnetz (10.0.0.0/8)
+
+---
+
+### ✅ Zusammenfassung:
+
+| Paar | Kommunizieren? | Begründung |
+|------|----------------|------------|
+| 1    | Ja             | Gleiche Netzadresse (/24) |
+| 2    | Ja             | Gleiche Netzadresse (/16) |
+| 3    | Nein           | Unterschiedliche Netzadressen (/24) |
+| 4    | Ja             | Gleiche Netzadresse (/8) |
 
