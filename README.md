@@ -135,6 +135,31 @@ Broadcastadresse: 10.255.255.255
 
 
 
+Aufgabe 3:
+
+
+---
+
+### 🔹 **10.0.0.0 /8**
+- **Anzahl im Subnetz (Host-ID):** 2²⁴ = **16.777.216**
+- **IP:** 10.0.0.0 bis 10.255.255.255  
+- **PC (verwendbare Hosts):** **16.777.214** (abzüglich Netzwerk- und Broadcastadresse)
+
+---
+
+### 🔹 **10.0.0.0 /16**
+- **Anzahl im Subnetz (Host-ID):** 2¹⁶ = **65.536**
+- **IP:** 10.0.0.0 bis 10.0.255.255  
+- **PC (verwendbare Hosts):** **65.534**
+
+---
+
+### 🔹 **10.0.0.0 /24**
+- **Anzahl im Subnetz (Host-ID):** 2⁸ = **256**
+- **IP:** 10.0.0.0 bis 10.0.0.255  
+- **PC (verwendbare Hosts):** **254**
+
+---
 
 
 
