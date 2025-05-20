@@ -270,5 +270,8 @@ Aufgabe 5:
 | 3    | Ja             | Beide im selben Subnetz (/8) |
 | 4    | Nein           | Unterschiedliche Netzbereiche (/16 vs. /24) |
 
+Aufgabe 6:
+
+<img width="773" alt="image" src="https://github.com/user-attachments/assets/a49b7e66-ceaf-4aba-87f3-44f6c840b4a7" />
 
 
