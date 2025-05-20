@@ -214,3 +214,59 @@ Aufgabe 4:
 | 3    | Nein           | Unterschiedliche Netzadressen (/24) |
 | 4    | Ja             | Gleiche Netzadresse (/8) |
 
+
+
+
+
+
+Aufgabe 5:
+
+
+
+---
+
+### 🧮 **1. Paar**
+**PC1:** 10.34.233.27 / 255.0.0.0 → Subnetz: 10.0.0.0  
+**PC2:** 10.34.233.27 / 255.255.255.0 → Subnetz: 10.34.233.0  
+
+❌ **Antwort:** **Nein**  
+**Begründung:** Unterschiedliche Subnetze → Kommunikation ohne Router nicht möglich
+
+---
+
+### 🧮 **2. Paar**
+**PC1:** 10.34.258.21 / 255.255.255.0 → ungültige IP!  
+→ 258 ist **kein gültiger Oktettwert** (max. 255)
+
+❌ **Antwort:** **Nein**  
+**Begründung:** IP-Adresse ungültig → Kommunikation nicht möglich
+
+---
+
+### 🧮 **3. Paar**
+**PC1:** 172.16.1.55 / 255.0.0.0 → Subnetz: 172.0.0.0  
+**PC2:** 172.33.5.27 / 255.0.0.0 → Subnetz: 172.0.0.0  
+
+✅ **Antwort:** **Ja**  
+**Begründung:** Beide im selben Netzbereich (Netzadresse 172.0.0.0/8)
+
+---
+
+### 🧮 **4. Paar**
+**PC1:** 10.0.1.17 / 255.255.0.0 → Subnetz: 10.0.0.0  
+**PC2:** 10.0.2.24 / 255.255.255.0 → Subnetz: 10.0.2.0  
+
+❌ **Antwort:** **Nein**  
+**Begründung:** Unterschiedliche Netzmasken → unterschiedliche Subnetze
+
+---
+
+### ✅ Zusammenfassung:
+
+| Paar | Kommunizieren? | Begründung |
+|------|----------------|------------|
+| 1    | Nein           | Unterschiedliche Subnetze (/8 vs. /24) |
+| 2    | Nein           | Ungültige IP-Adresse (258) |
+| 3    | Ja             | Beide im selben Subnetz (/8) |
+| 4    | Nein           | Unterschiedliche Netzbereiche (/16 vs. /24) |
+
