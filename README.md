@@ -270,3 +270,5 @@ Aufgabe 5:
 | 3    | Ja             | Beide im selben Subnetz (/8) |
 | 4    | Nein           | Unterschiedliche Netzbereiche (/16 vs. /24) |
 
+
+
