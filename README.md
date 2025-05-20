@@ -63,3 +63,26 @@ Zimmer1 Zimmer2 Zimmer3
 ---
 
 
+20.05.2025
+
+
+
+⸻
+
+Private IPv4-Adressbereiche
+
+10   .0   .0.0   –   10   .255.255.255       Ehemals Class A-Adresse  
+172.16 .0.0     –   172.31 .255.255         Ehemals Class B-Adresse  
+192.168.0.0     –   192.168.255.255         Ehemals Class C-Adresse  
+
+
+⸻
+
+Spezialadressen
+
+127.0.0.1                                  Localnet oder Loopbackadresse (Eigener Rechner)  
+169.254.0.0 – 169.254.255.255              ZEROCONF/APIPA-Adressen bei DHCP-Ausfall  
+
+
+⸻
+
