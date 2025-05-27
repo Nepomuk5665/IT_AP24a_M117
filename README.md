@@ -274,4 +274,55 @@ Aufgabe 6:
 
 <img width="773" alt="image" src="https://github.com/user-attachments/assets/a49b7e66-ceaf-4aba-87f3-44f6c840b4a7" />
 
+17.05.2025
+
+
+
+Aufgabe 1:
+SAT Tabelle
+
+bd
+be
+ae
+aa, ab, ac, ad, bc, bb, bc
+
+
+
+Aufgabe 2:
+1. Was ist der Zweck der logischen Port-Nummer?
+Sie identifiziert eindeutig eine Anwendung oder einen Dienst auf einem Host und ordnet eingehende Datenpakete der richtigen Anwendung zu.
+
+2. Wie viele Bit hat die Portnummer und was ist ihr Wertebereich?
+16 Bit, Wertebereich: 0-65535
+
+3. Was ist der Wertebereich der System Ports (Wellknown Ports)?
+0-1023
+
+4. Was ist der Wertebereich der Registered Ports (User Ports)?
+1024-49151
+
+5. Was ist der Wertebereich der Dynamic Ports?
+49152-65535
+
+6. Über welchen Portbereich kann das Betriebssystem frei verfügen?
+49152-65535 (Dynamic Ports)
+
+7. Protokollabkürzungen und System-Portnummern:
+- HTTP: Hypertext Transfer Protocol (Port 80)
+- HTTPS: Hypertext Transfer Protocol Secure (Port 443)
+- FTP: File Transfer Protocol (Port 21)
+- SMTP: Simple Mail Transfer Protocol (Port 25)
+- POP3: Post Office Protocol Version 3 (Port 110)
+- POP3S: Post Office Protocol Version 3 Secure (Port 995)
+- IMAP: Internet Message Access Protocol (Port 143)
+- IMAPS: Internet Message Access Protocol Secure (Port 993)
+- Echo/Ping: Echo Protocol (Port 7)
+- DNS: Domain Name System (Port 53)
+
+
+
+
+
+
+
 
