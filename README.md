@@ -403,4 +403,30 @@ Angenommen, du bist in `C:\Benutzer\Max\Dokumente`
 ---
 
 
+**1. Vererbung von Zugriffsrechten:**
+Unter Vererbung von Zugriffsrechten versteht man das automatische Übertragen von Berechtigungen von übergeordneten Ordnern auf untergeordnete Dateien und Ordner. Wenn einem Benutzer Zugriffsrechte auf einen Hauptordner gewährt werden, erben alle darin enthaltenen Unterordner und Dateien standardmäßig diese Berechtigungen, es sei denn, sie werden explizit überschrieben.
+
+**2. Kommando \\10.0.1.100\projekte2024:**
+Dies ist ein UNC-Pfad (Universal Naming Convention), der auf einen Netzwerkpfad verweist. Er bedeutet:
+- 10.0.1.100 = IP-Adresse eines Servers im Netzwerk
+- projekte2024 = Name der freigegebenen Ressource/des freigegebenen Ordners
+Der Pfad stellt eine Verbindung zu einem geteilten Ordner auf einem Netzwerkcomputer her.
+
+**3. USB-Stick mit sensiblen Daten verloren:**
+**Ja, Sie sollten sich definitiv Sorgen machen!** Bei FAT32 sind Daten nicht verschlüsselt und leicht zugänglich. Sofortmaßnahmen:
+- Alle gespeicherten Passwörter sofort ändern
+- Cloud-Zugänge überprüfen und Sitzungen beenden
+- Kreditkarten sperren lassen oder Banken kontaktieren
+- Falls möglich, Remote-Löschung aktivieren
+
+**4. NTFS USB-Stick Sicherheit:**
+Beim korrekten Auswerfen werden die Daten **nicht automatisch gelöscht** - sie bleiben auf dem Stick. Der Zugriff wird nur **verweigert**, wenn:
+- NTFS-Berechtigungen korrekt gesetzt sind
+- Der Stick mit Verschlüsselung (BitLocker) geschützt ist
+- Passwortschutz aktiviert wurde
+
+**Empfehlung:** Für sensible Daten immer Verschlüsselung verwenden, nicht nur auf NTFS-Berechtigungen vertrauen.
+
+
+
 
