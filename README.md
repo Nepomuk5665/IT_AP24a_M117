@@ -323,6 +323,40 @@ Sie identifiziert eindeutig eine Anwendung oder einen Dienst auf einem Host und 
 
 
 
+### 1. **Absoluter und relativer Pfad**
+- **Absoluter Pfad**: Gibt den vollständigen Weg zu einer Datei oder einem Verzeichnis an – vom **Stammverzeichnis (Root)** bis zum Ziel.  
+  Beispiel (Windows): `C:\Benutzer\Max\Dokumente\Datei.txt`  
+  Beispiel (Linux): `/home/max/dokumente/datei.txt`
+
+- **Relativer Pfad**: Gibt den Weg **relativ zum aktuellen Verzeichnis** an.  
+  Beispiel: `..\Bilder\foto.jpg` (ein Verzeichnis hoch, dann in „Bilder“ gehen)
+
+---
+
+### 2. **Pfadangaben: Bedeutung von `.` und `..`**
+- `.` (Punkt): Steht für das **aktuelle Verzeichnis**  
+- `..` (zwei Punkte): Steht für das **übergeordnete Verzeichnis**
+
+Beispiel:  
+Angenommen, du bist in `C:\Benutzer\Max\Dokumente`  
+- `.` → bleibt in `Dokumente`  
+- `..` → geht zurück zu `Max`  
+- `..\Bilder` → geht zu `C:\Benutzer\Max\Bilder`
+
+---
+
+### 3. **FAT und NTFS – Bedeutung und Unterschiede**
+- **FAT** (File Allocation Table):  
+  Ein älteres Dateisystem (z. B. FAT32), weit verbreitet bei USB-Sticks und Speicherkarten.  
+  - Vorteile: Kompatibel mit fast allen Betriebssystemen  
+  - Nachteile: Begrenzte Dateigröße (max. 4 GB), keine Benutzerrechte, weniger sicher
+
+- **NTFS** (New Technology File System):  
+  Modernes Windows-Dateisystem  
+  - Vorteile: Unterstützt große Dateien, Rechteverwaltung, Verschlüsselung, Journaling (Datensicherheit)  
+  - Nachteile: Nicht vollständig kompatibel mit älteren Systemen oder macOS ohne Zusatzsoftware
+
+
 
 
 
