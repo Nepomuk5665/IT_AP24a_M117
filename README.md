@@ -358,5 +358,49 @@ Angenommen, du bist in `C:\Benutzer\Max\Dokumente`
 
 
 
+---
+
+### **1. Wieso Benutzer-Accounting?**
+
+**Benutzer-Accounting** bedeutet, dass Aktivitäten von Benutzern im System **protokolliert und überwacht** werden.
+
+**Ziele und Gründe:**
+- **Sicherheit**: Nachvollziehbarkeit, wer was gemacht hat
+- **Missbrauch erkennen**: Unberechtigte Zugriffe entdecken
+- **Abrechnung**: Nutzung von Ressourcen (z. B. Druck, Speicher, Serverzeit) erfassen
+- **Verantwortung zuweisen**: Jede Aktion ist einem Benutzer zugeordnet
+- **Audits & Compliance**: Vorschriften und Richtlinien einhalten
+
+---
+
+### **2. Was will man erreichen, wenn man Zugriffsrechte gruppenweise erteilt?**
+
+**Gruppenbasierte Rechtevergabe bedeutet:**
+- Benutzer werden in **Gruppen** (z. B. „Buchhaltung“, „IT“) eingeteilt
+- Zugriffsrechte werden **einmal pro Gruppe** vergeben, nicht pro Person
+
+**Vorteile/Ziele:**
+- **Effizienz**: Rechteverwaltung ist einfacher und schneller
+- **Übersichtlichkeit**: Klare Struktur, wer worauf zugreifen darf
+- **Wartbarkeit**: Neue Benutzer müssen nur der richtigen Gruppe zugeordnet werden
+- **Fehlervermeidung**: Geringeres Risiko falscher Rechtevergabe
+
+---
+
+### **3. Wann lokale, wann zentrale Benutzerverwaltung sinnvoll?**
+
+| **Lokale Benutzerverwaltung** | **Zentrale Benutzerverwaltung** |
+|-------------------------------|---------------------------------|
+| Benutzerkonten sind **nur auf einem Gerät** gespeichert | Benutzerkonten sind **netzwerkweit zentral verwaltet** (z. B. per Active Directory) |
+| **Sinnvoll bei:** Einzelplatzrechnern, kleinen Netzwerken, ohne Server | **Sinnvoll bei:** Firmen, Schulen, großen Netzwerken |
+| Geringer Verwaltungsaufwand | Einheitliche Verwaltung vieler Benutzer |
+| Keine Abhängigkeit vom Netzwerk | Benutzer können sich **an jedem Gerät im Netzwerk anmelden** |
+
+**Kurz:**
+- **Lokal**, wenn du **wenige Geräte oder Benutzer** hast.
+- **Zentral**, wenn du **viele Benutzer oder Geräte im Netzwerk** verwalten willst.
+
+---
+
 
 
