@@ -428,5 +428,60 @@ Beim korrekten Auswerfen werden die Daten **nicht automatisch gelöscht** - sie 
 **Empfehlung:** Für sensible Daten immer Verschlüsselung verwenden, nicht nur auf NTFS-Berechtigungen vertrauen.
 
 
+Hier das Subnetting für 10.0.0.0/16 mit neun /24-Subnetzen A–I und die PC-Konfigurationen.
+
+Aufgabe Logische Topologie der Firma Muster GmbH
+
+1. Übersicht Subnetze A–I (/24)
+
+Subnetz	Netzadresse	Broadcast	Maske
+
+A	10.0.0.0	10.0.0.255	255.255.255.0 (/24)
+
+B	10.0.1.0	10.0.1.255	255.255.255.0 (/24)
+
+C	10.0.2.0	10.0.2.255	255.255.255.0 (/24)
+
+D	10.0.3.0	10.0.3.255	255.255.255.0 (/24)
+
+E	10.0.4.0	10.0.4.255	255.255.255.0 (/24)
+
+F	10.0.5.0	10.0.5.255	255.255.255.0 (/24)
+
+G	10.0.6.0	10.0.6.255	255.255.255.0 (/24)
+
+H	10.0.7.0	10.0.7.255	255.255.255.0 (/24)
+
+I	10.0.8.0	10.0.8.255	255.255.255.0 (/24)
+
+
+
+
+2. PC-Konfiguration (IP, Maske, Gateway)
+
+Subnetzmaske für alle PCs: 255.255.255.0 (/24)
+
+Gateway pro Subnetz: 10.0.X.1 (X = Subnetz-Index A=0, B=1, …, I=8)
+
+PC	Subnetz	IP-Adresse	Maske	Standard-Gateway
+
+A-PC1	A	10.0.0.2	255.255.255.0	10.0.0.1
+
+A-PC2	A	10.0.0.3	255.255.255.0	10.0.0.1
+
+B-PC1	B	10.0.1.2	255.255.255.0	10.0.1.1
+
+B-PC2	B	10.0.1.3	255.255.255.0	10.0.1.1
+
+C-PC1	C	10.0.2.2	255.255.255.0	10.0.2.1
+
+C-PC2	C	10.0.2.3	255.255.255.0	10.0.2.1
+
+D-PC1	D	10.0.3.2	255.255.255.0	10.0.3.1
+
+D-PC2	D	10.0.3.3	255.255.255.0	10.0.3.1
+
+E-PC	E	10.0.4.2	255.255.255.0	10.0.4.1
+
 
 
