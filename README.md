@@ -484,4 +484,139 @@ D-PC2	D	10.0.3.3	255.255.255.0	10.0.3.1
 E-PC	E	10.0.4.2	255.255.255.0	10.0.4.1
 
 
+## 01.07.2025
+
+
+---
+
+### **1. Displayfilter für das Anpingen eines Rechners**
+**Antwort:**  
+`icmp`
+
+---
+
+### **2. Kommando, um den Lokalhost anzupingen**
+**Antwort:**  
+```bash
+ping 127.0.0.1
+```
+
+---
+
+### **3. Ping an den Lokalhost – Was zeigt Wireshark?**
+**Antwort:**  
+Wireshark zeigt ICMP-Pakete (Echo Request und Echo Reply), allerdings nur, wenn der Netzwerkverkehr über eine Netzwerkschnittstelle läuft. Beim `127.0.0.1`-Ping (Loopback) wird meist **kein Paket** in Wireshark sichtbar, da es die Netzwerkschnittstelle nicht verlässt. Nur mit spezieller Loopback-Erfassung sichtbar.
+
+---
+
+### **4. Wie findet man die Router-IP des lokalen Netzwerks?**
+**Antwort:**  
+Über die Kommandozeile:
+```bash
+ipconfig (Windows)
+ip route | grep default (Linux/Mac)
+```
+Dort steht die **Default Gateway IP-Adresse**, also die Router-IP.
+
+---
+
+### **5. Router anpingen – Wireshark-Analyse**
+**Antwort:**  
+Es werden ICMP Echo Requests an den Router gesendet und Echo Replies empfangen. Wireshark zeigt:
+- ICMP Pakete
+- Ziel-IP ist die des Routers
+- MAC-Adresse des Routers als Empfänger (Layer 2)
+
+---
+
+### **6. Gibt es bei Ping einen OSI-Layer 4 (Transport-Layer)?**
+**Antwort:**  
+**Nein.** ICMP gehört direkt zum **Netzwerk-Layer (Layer 3)** und nutzt keinen Transport-Layer wie TCP oder UDP.
+
+---
+
+### **7. DNS-Server herausfinden**
+**Antwort:**  
+- Windows: `ipconfig /all` → Eintrag "DNS-Server"
+- Linux/Mac: `cat /etc/resolv.conf`  
+Hier steht die IP-Adresse des verwendeten DNS-Servers.
+
+---
+
+### **8. DNS-Abfrage aufzeichnen und analysieren**
+**Antworten:**
+- **Displayfilter für DNS:**  
+  `dns`
+- **DNS-Protokoll:**  
+  **UDP** (Standard), TCP nur bei großen Antworten oder Zonenübertragungen
+- **Portnummer:**  
+  UDP **Port 53**
+
+---
+
+### **9. HTTP-GET analysieren (http://www.example.ch)**
+- **Displayfilter:**  
+  `http && ip.addr == [Webserver-IP]`
+- **Layer-Analyse:**
+  - a. **MAC-Adressen (OSI Layer 2):**  
+    Absender: MAC-Adresse des PCs  
+    Empfänger: MAC-Adresse des Routers oder Webservers (je nach Netzwerk)
+  - b. **IP-Adressen (OSI Layer 3):**  
+    Absender: IP des PCs  
+    Empfänger: IP des Webservers (`www.example.ch`)
+  - c. **Ports (OSI Layer 4):**  
+    Absender-Port: Zufälliger hoher TCP-Port (z.B. 49123)  
+    Empfänger-Port: TCP **Port 80** (HTTP)
+  - d. **Anwendungsschicht (OSI Layer 7):**  
+    HTTP GET-Request sichtbar. Danach folgt HTML-Datenübertragung – sichtbar als Text (HTML, CSS etc.)
+
+---
+
+### **10. HTTPS mit www.zkb.ch analysieren**
+
+- **a. TLS – OSI-Schicht:**  
+  **Layer 6** (Präsentationsschicht). TLS verschlüsselt Anwendungen wie HTTP.
+
+- **Displayfilter für TLS:**  
+  `ssl.handshake.extensions_server_name`
+
+- **b. IP-Adresse von www.zkb.ch:**  
+  Durch DNS-Request oder `nslookup www.zkb.ch`
+
+- **c. MAC-Adressen (Layer 2):**  
+  Absender: MAC-Adresse des PCs  
+  Empfänger: MAC-Adresse des Routers (nicht direkt die des Webservers, da über Internet)
+
+- **d. IP-Adressen (Layer 3):**  
+  Absender: Lokale IP-Adresse  
+  Empfänger: IP-Adresse des Webservers (ZKB)
+
+- **e. Ports (Layer 4):**  
+  Absender-Port: Zufälliger TCP-Port  
+  Empfänger-Port: TCP **Port 443** (HTTPS)
+
+- **f. Application-Layer:**  
+  Inhalte sind verschlüsselt (nicht sichtbar wie bei HTTP).  
+  Sichtbar bleibt:
+  - **SNI (Server Name Indication)** beim TLS-Handshake
+  - **Ziel-Webseite (Hostname)**  
+  - **Handshake-Informationen**
+  - **Zertifikate**
+
+---
+
+### **11. Eigene Dienst-Analyse (Beispiel: DHCP)**
+
+- **Gewählter Dienst:** DHCP (Dynamic Host Configuration Protocol)
+- **Well-Known-Portnummern:**  
+  - Server: UDP **Port 67**  
+  - Client: UDP **Port 68**
+- **Verwendeter Displayfilter:**  
+  `bootp` (für DHCP)
+- **Vorgehen:**
+  - Netzwerkschnittstelle auswählen
+  - Wireshark-Aufzeichnung starten
+  - DHCP-Anfrage auslösen (z.B. durch `ipconfig /release` + `ipconfig /renew` unter Windows)
+  - Pakete analysieren: DHCP Discover, Offer, Request, ACK
+
 
